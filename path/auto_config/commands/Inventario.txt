@@ -1,0 +1,5 @@
+cd "%ProgramFiles(x86)%\FusionInventory-Agent\perl\bin"
+erl.exe fusioninventory-agent %*
+cd "%ProgramFiles%\FusionInventory-Agent\perl\bin"
+perl.exe fusioninventory-agent %*
+exit

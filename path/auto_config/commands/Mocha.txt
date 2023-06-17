@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\MochaSoft\Mocha TN3270 for Vista\tn3270.exe" /X "C:\prf_Mocha\user-MOCHA_v2.config"
