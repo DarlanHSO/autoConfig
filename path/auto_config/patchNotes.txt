@@ -69,3 +69,10 @@ V2.3.2
 - nova aparência ao abrir autoConfig;
 - nova aparência ao abrir ServerAccess;
 - atualização nos scripts winrmQuickconfig e updateGPO.
+
+V2.3.3
+--------------------------------------------------------
+- nova função implementada no aplicativo, agora ao exe-
+cutar o aplicativo, é feita uma verificação da versão,
+aonde é comparada a versão instalada no computador com a
+versão mais atualizada da rede.

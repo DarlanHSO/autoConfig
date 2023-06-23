@@ -3,7 +3,8 @@ cls
 
 title Desenvolvido por: Darlan Henrique de Souza Oliveira
 
-set version=v2.3.2
+set currentVersionPath="C:\Users\Public\auto_config\version.txt"
+set /p currentVersion=<"%currentVersionPath%"
 
 color F0
 echo "               _            _____                 __  _        
@@ -13,7 +14,7 @@ echo " / _` || | | || __| / _ \ | |      / _ \ | '_ \ |  _|| | / _` |
 echo "| (_| || |_| || |_ | (_) || |____ | (_) || | | || |  | || (_| |
 echo " \__,_| \__,_| \__| \___/  \_____| \___/ |_| |_||_|  |_| \__, |
 echo "                                                          __/ |
-echo "                               Made by Darlan HS Oliveira|___/   %version%
+echo "                               Made by Darlan HS Oliveira|___/   %currentVersion%
 echo.
 
 timeout /t 2
@@ -36,35 +37,57 @@ color F0
 echo.
 set /p userPrincipal="Digite o usuario logado e pressione ENTER: "
 
+:versionVerifier
+set newestVersionPath="\\caminho_servidor\auto_config\path\auto_config\version.txt"
+set /p newestVersion=<"%newestVersionPath%"
+
+echo.
+echo  Verificando versao do Aplicativo
+timeout /t 2
+echo.
+
+if "%currentVersion%"=="%newestVersion%" (
+    echo O aplicativo esta atualizado!
+    timeout /t 2
+) else (
+    echo O aplicativo deve ser atualizado!
+	goto updateApp
+)
+
 :menu
 color F0
 cls
 
 echo. 
-echo  %version% 
-echo             PC: %computername%        user: %userPrincipal% 
-echo ***************************************************************************
-echo **        MENU DE INSTALACAO E CONFIGURACAO DE PROGRAMAS POR SETOR       **
-echo **                                                                       **
-echo **     1)Atualizar Aplicativo                     0)Sair                 **
-echo **                                                                       **
-echo **           Instalacoes                          Comandos               **
-echo **     10) Download Microsoft Teams      20) Inventario                  **
-echo **     11) Download Pacote Office        21) Codigo de Ativar Mocha      **
-echo **     12) Download Toolbar              22) Ativar Toolbar              **
-echo **     13) Download SipPhone             23) Ativar SipPhone             **
-echo **     14) Configurar BitLocker          24) Mudar Ramais                **  
-echo **     15) Atualizar Windows             25) Desligar Maquina            **
-echo **                                       26) Reiniciar Maquina           **
-echo **           Aplicativos                 27) Cancelar Desligamento       **
-echo **      30) Abrir FortClient VPN         28) Atualizar Politicas         **		
-echo **      31) Abrir MochaSoft              29) Winrm quickconfig           **
-echo **                                                                       **
-echo ***************************************************************************
-echo *********   Densenvolvido por Darlan Henrique de Souza Oliveira   *********
-echo ********************   Para uso da MICRO-INFORMATICA   ********************  
-echo ***************************************************************************
-echo. 
+echo   %currentVersion% 
+echo               PC: %computername%        user: %userPrincipal% 
+echo   ***************************************************************************
+echo   **        MENU DE INSTALACAO E CONFIGURACAO DE PROGRAMAS POR SETOR       **
+echo   **                                                                       **
+echo   **     1)Atualizar Aplicativo                     0)Sair                 **
+echo   **                                                                       **
+echo   **           Instalacoes                          Comandos               **
+echo   **     10) Download Microsoft Teams      20) Inventario                  **
+echo   **     11) Download Pacote Office        21) Codigo de Ativar Mocha      **
+echo   **     12) Download Toolbar              22) Ativar Toolbar              **
+echo   **     13) Download SipPhone             23) Ativar SipPhone             **
+echo   **     14) Configurar BitLocker          24) Mudar Ramais                **  
+echo   **     15) Atualizar Windows             25) Desligar Maquina            **
+echo   **                                       26) Reiniciar Maquina           **
+echo   **           Aplicativos                 27) Cancelar Desligamento       **
+echo   **      30) Abrir FortClient VPN         28) Atualizar Politicas         **		
+echo   **      31) Abrir MochaSoft              29) Winrm quickconfig           **
+echo   **                                                                       **
+echo   ********************   Para uso da MICROINFORMATICA   *********************  
+echo "                    _            _____                 __  _        
+echo "                   | |          / ____|               / _|(_)       
+echo "       __ _  _   _ | |_   ___  | |       ___   _ __  | |_  _   __ _ 
+echo "      / _` || | | || __| / _ \ | |      / _ \ | '_ \ |  _|| | / _` |
+echo "     | (_| || |_| || |_ | (_) || |____ | (_) || | | || |  | || (_| |
+echo "      \__,_| \__,_| \__| \___/  \_____| \___/ |_| |_||_|  |_| \__, |
+echo "                                                               __/ |
+echo "                                    Made by Darlan HS Oliveira|___/  %currentVersion%
+echo.
 
 set /p op= Qual a opcao desejada?
 
@@ -137,14 +160,10 @@ if %op% equ 31 goto openMocha
 	rem Atualiza a pasta autoConfig com os softwares e scripts mais recentes
 	echo. Atualizando Aplicativo
 	start "" "C:\Users\Public\auto_config\scripts\updateApp.bat"
-	rem Xcopy "\\caminho_servidor\auto_config\path\" "C:\Users\Public\" /E /Q /H /Y /D
-	rem timeout /t 10
-	rem copy C:\Users\Public\auto_config\links "C:\Users\Public\Desktop" 
-	rem pause
 	goto menu
 
 
-rem     COMANDOS DE INTALAÇÃO
+rem     COMANDOS DE INSTALAÇÃO
 :BitLocker
 	cls
 	rem Abre as opções do Bitlocker
