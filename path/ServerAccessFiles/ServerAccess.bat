@@ -31,9 +31,11 @@ if %errorLevel% neq 0 (
   exit /b 1
 )
 
+set publicDir="C:\Users\Public"
+
 echo.
-start "" "C:\Users\Public\ServerAccessFiles\ServerAccess1.lnk"
+start "" "%publicDir%\ServerAccessFiles\ServerAccess1.lnk"
 pause
-start "" "C:\Users\Public\ServerAccessFiles\ServerAccess2.lnk"
+start "" "%publicDir%\ServerAccessFiles\ServerAccess2.lnk"
 
 exit

@@ -4,75 +4,70 @@ UPDATES, CHANGES AND RELEASES
 
 CREATED BY: DARLAN HENRIQUE DE SOUZA OLIVEIRA
 
-The program was created do to a lot waste of time from
-the microinformatica team, searching programs and
-finding commands that are unnecessary and can be did 
-using a script, the whole goal was to make it a tool 
-to help with remote support and a fast computer prepa-
-ration for new employees, reducing the amount of stress
-and repetitive work that used to have in this role.
+The program was created do to a lot waste of time from the microinformatica team, searching programs and finding commands that are unnecessary and can be did using a script, the whole goal was to make it a tool to help with remote support and a fast computer preparation for new employees, reducing the amount of stress and repetitive work that used to have in this role.
 
 V1
 --------------------------------------------------------
-- unificação dos aplicativos e comandos para a prepara-
-ção de uma máquina nova em um só lugar;
-- criação de scripts para as necessidades do departamen-
-to, o que já aumentou significativamente a produtividade.
+feat: criação de scripts para as necessidades do departamento, o que já aumentou significativamente a produtividade.
+feat: unificação dos aplicativos e comandos para a preparação de uma máquina nova em um só lugar;
 
 V2
 --------------------------------------------------------
-- criação de interface gráfica;
-- estruturação do aplicativo em pastas, subdividido em 
+feat: criação de interface gráfica;
+refactor: estruturação do aplicativo em pastas, subdividido em 
 apps, commands, icon, links e scripts;
-- criação de links públicos dos aplicativos autoConfig e
+feat: criação de links públicos dos aplicativos autoConfig e
 serverAccess;
-- adição de comandos básicos do windows como shutdown,
+feat: adição de comandos básicos do windows como shutdown,
 gpupdate, shutdown /a;
-- reestruturação do código e unificação do sistema em 
+refactor: reestruturação do código e unificação do sistema em 
 um só lugar.
 
 V2.1.1
 --------------------------------------------------------
-- atualização do instalador do app, agora drivers não
+perf: atualização do instalador do app, agora drivers não
 atrasam a instalação pois ficam no final;
-- mudança de cor nos erros de elevação.
+style: mudança de cor nos erros de elevação.
 
 V2.1.2
 --------------------------------------------------------
-- correção do script updateApp;
-- novo comando "winrm quickconfig".
+fix: correção do script updateApp;
+feature: novo comando "winrm quickconfig".
 
 V2.2.1
 --------------------------------------------------------
-- automatização da toolbar, agora copia as configurações
+feat: automatização da toolbar, agora copia as configurações
 mais atualizadas;
-- incluída a opção de atualizar o windows.
+feat: incluída a opção de atualizar o windows.
 
 V2.2.2
 --------------------------------------------------------
-- manutenção do ServerAccess;
-- alteração na interação do usuário com a interface agora
+fix: manutenção do ServerAccess;
+feat: alteração na interação do usuário com a interface agora
 passando mais informações sobre o que está acontecendo;
-- atualização dos icones do autoConfig e ServerAccess;
+style: atualização dos icones do autoConfig e ServerAccess;
 
 V2.3.1
 --------------------------------------------------------
-- tempo de delay no arquivo execute.bat, retirado;
-- mudança de cor nos erros de elevação;
-- mudança de cor no autoConfig;
-- atualização do instalador do pacote office para a nova
-versão Microsoft 365 v64bits;
-- novos arquivos da toolbar foram atualizados 12/06/23.
+perf: tempo de delay no arquivo execute.bat, retirado;
+style: mudança de cor nos erros de elevação;
+style: mudança de cor no autoConfig;
+config: atualização do instalador do pacote office para a nova versão Microsoft 365 v64bits;
+feat: novos arquivos da toolbar foram atualizados 12/06/23.
 
 V2.3.2
 --------------------------------------------------------
-- nova aparência ao abrir autoConfig;
-- nova aparência ao abrir ServerAccess;
-- atualização nos scripts winrmQuickconfig e updateGPO.
+style: nova aparência ao abrir autoConfig;
+style: nova aparência ao abrir ServerAccess;
+refactor: atualização nos scripts winrmQuickconfig e updateGPO.
 
 V2.3.3
 --------------------------------------------------------
-- nova função implementada no aplicativo, agora ao exe-
-cutar o aplicativo, é feita uma verificação da versão,
-aonde é comparada a versão instalada no computador com a
-versão mais atualizada da rede.
+feat: nova função implementada no aplicativo, agora ao executar o aplicativo, é feita uma verificação da versão, aonde é comparada a versão instalada no computador com a versão mais atualizada da rede.
+
+V2.3.4
+--------------------------------------------------------
+refactor: adição de novas variáveis para facilitar a visualização e entendimento do código, e genereliza-lo.
+security: aumento da segurança em commits pois o caminho do servidor pode ser ocultado facilmente.
+fix: removido bug do instalador que não achava o caminho da rede para istalar o aplicativo em máquinas que estavam a mais tempo no domínio.
+perf: removido o delay na verificação de versão do app.
