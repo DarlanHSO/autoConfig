@@ -71,3 +71,8 @@ refactor: adição de novas variáveis para facilitar a visualização e entendi
 security: aumento da segurança em commits pois o caminho do servidor pode ser ocultado facilmente.
 fix: removido bug do instalador que não achava o caminho da rede para istalar o aplicativo em máquinas que estavam a mais tempo no domínio.
 perf: removido o delay na verificação de versão do app.
+
+V2.3.5
+--------------------------------------------------------
+feat: atalho de instalação agora pode ser acessado nos arquivos do aplicativo autoConfig na máquina local.
+style: atalho de instalação recebeu um novo ícone.
